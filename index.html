@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <title>Дана Савчук — Visual / Brand Designer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f3eee6;
+        --paper: #fbf8f2;
+        --ink: #2a241c;
+        --ink-soft: #5c5244;
+        --muted: #948a78;
+        --line: #e2dacb;
+        --accent: #b5654a;
+        --accent-soft: #e9d9ce;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        line-height: 1.55;
+      }
+
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 28px;
+      }
+
+      /* ───── HERO ───── */
+      header.hero {
+        padding: 88px 0 56px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hero .kicker {
+        font-size: 13px;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 600;
+        margin-bottom: 26px;
+      }
+
+      .hero h1 {
+        font-family: "Inter", sans-serif;
+        font-weight: 800;
+        font-size: clamp(44px, 7.5vw, 86px);
+        line-height: 0.98;
+        letter-spacing: -0.03em;
+        margin-bottom: 26px;
+      }
+
+      .hero h1 em {
+        font-style: normal;
+        color: var(--accent);
+      }
+
+      .hero .lead {
+        font-size: 19px;
+        color: var(--ink-soft);
+        max-width: 620px;
+        margin-bottom: 32px;
+      }
+
+      .hero .contacts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 14px;
+      }
+
+      .hero .contacts a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 9px 18px;
+        border: 1px solid var(--ink);
+        border-radius: 100px;
+        color: var(--ink);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition:
+          background 0.15s ease,
+          color 0.15s ease;
+      }
+
+      .hero .contacts a:hover {
+        background: var(--ink);
+        color: var(--paper);
+      }
+
+      /* ───── WORK SECTION ───── */
+      section.work {
+        padding: 64px 0 8px;
+      }
+
+      .sec-head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 8px 20px;
+        margin-bottom: 8px;
+      }
+
+      .sec-head h2 {
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        font-size: clamp(28px, 4.5vw, 44px);
+        letter-spacing: -0.025em;
+      }
+
+      .sec-head .role {
+        font-size: 14px;
+        color: var(--accent);
+        font-weight: 600;
+        letter-spacing: 0.04em;
+      }
+
+      .sec-desc {
+        font-size: 16px;
+        color: var(--ink-soft);
+        max-width: 640px;
+        margin-bottom: 30px;
+      }
+
+      .sec-desc a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      .sec-desc a:hover {
+        text-decoration: underline;
+      }
+
+      /* ───── GRID ───── */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-bottom: 8px;
+      }
+
+      .grid figure {
+        margin: 0;
+        border-radius: 14px;
+        overflow: hidden;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease;
+      }
+
+      .grid figure:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 30px rgba(42, 36, 28, 0.12);
+      }
+
+      .grid figure img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        aspect-ratio: 4 / 5;
+      }
+
+      /* ───── FOOTER ───── */
+      footer {
+        margin-top: 64px;
+        padding: 56px 0 80px;
+        border-top: 1px solid var(--line);
+      }
+
+      footer .tools-label {
+        font-size: 13px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--muted);
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+
+      footer .tools {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 44px;
+      }
+
+      footer .tools span {
+        padding: 8px 16px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 100px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--ink-soft);
+      }
+
+      footer .closing {
+        font-style: italic;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: clamp(20px, 3vw, 30px);
+        line-height: 1.3;
+        max-width: 680px;
+        color: var(--ink);
+        margin-bottom: 30px;
+        letter-spacing: -0.01em;
+      }
+
+      footer .sign {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 14px;
+        align-items: center;
+      }
+
+      footer .sign a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 20px;
+        border-radius: 100px;
+        background: var(--ink);
+        color: var(--paper);
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+        transition: opacity 0.15s ease;
+      }
+
+      footer .sign a:hover {
+        opacity: 0.82;
+      }
+
+      footer .sign a.ghost {
+        background: transparent;
+        color: var(--ink);
+        border: 1px solid var(--ink);
+      }
+
+      /* ───── RESPONSIVE ───── */
+      @media (max-width: 720px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+        }
+      }
+
+      @media (max-width: 440px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .wrap {
+          padding: 0 20px;
+        }
+        header.hero {
+          padding: 56px 0 40px;
+        }
+        section.work {
+          padding: 48px 0 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ── HERO ── -->
+    <header class="hero">
+      <div class="wrap">
+        <h1>Дана Савчук<br /><em>visual &amp; brand</em> designer</h1>
+        <p class="lead">
+          Створюю візуал для брендів — Instagram, Stories, каруселі, банери.
+          Працюю в стилі бренду: композиція, типографіка, увага до деталей.
+        </p>
+        <div class="contacts">
+          <a href="https://t.me/danasavchuk30" target="_blank" rel="noopener"
+            >Telegram</a
+          >
+          <a
+            href="https://www.instagram.com/danasavchuk_/"
+            target="_blank"
+            rel="noopener"
+            >Instagram</a
+          >
+          <a href="mailto:danasavchuk30@gmail.com">E-mail</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ── BEAUTY SYSTEMA ── -->
+    <section class="work">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>beauty&nbsp;systema</h2>
+          <span class="role">окремі креативи · b'юті бренд</span>
+        </div>
+        <p class="sec-desc">
+          Дизайн каруселей та обкладинок для Instagram у єдиному стилі бренду:
+          смілива типографіка, неоновий акцент, робота з продуктовими колажами
+          та інфо-структурою.
+          <a
+            href="https://www.instagram.com/beauty_systema/"
+            target="_blank"
+            rel="noopener"
+            >@beauty_systema</a
+          >
+        </p>
+        <div class="grid">
+          <!-- Поклади зображення у папку assets/ з такими іменами -->
+          <figure>
+            <img src="assets/1.PNG" alt="Помилки у використанні активів" />
+          </figure>
+          <figure>
+            <img src="assets/2.png" alt="Пептиди — які бувають" />
+          </figure>
+          <figure>
+            <img src="assets/3.png" alt="Багато активів одночасно" />
+          </figure>
+          <figure><img src="assets/4.png" alt="Матрикіни" /></figure>
+          <figure><img src="assets/5.png" alt="Міорелаксанти" /></figure>
+          <figure><img src="assets/6.png" alt="Очищення шкіри" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── GOODEVAS ── -->
+    <section class="work">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Goodevas</h2>
+          <span class="role">контент-дизайн</span>
+        </div>
+        <p class="sec-desc">
+          Графічні елементи для Instagram бренду дитячих меблів: пости,
+          каруселі, оформлення Stories highlights, банери, сезонні запуски та
+          giveaway. Тримала єдиний теплий візуальний стиль акаунту.
+          <a
+            href="https://www.instagram.com/goodevas/"
+            target="_blank"
+            rel="noopener"
+            >@goodevas</a
+          >
+        </p>
+        <div class="grid">
+          <figure><img src="assets/1g.PNG" alt="Goodevas Playground" /></figure>
+          <figure>
+            <img src="assets/2g.png" alt="Big Giveaway from Goodevas" />
+          </figure>
+          <figure><img src="assets/3g.png" alt="Charity Evening" /></figure>
+          <figure>
+            <img src="assets/4g.png" alt="Goodevas evas & leos" />
+          </figure>
+          <figure><img src="assets/5g.png" alt="New Year Sale" /></figure>
+          <figure><img src="assets/6g.png" alt="Christmas Giveaway" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+      <div class="wrap">
+        <div class="tools-label">Інструменти</div>
+        <div class="tools">
+          <span>Figma</span>
+          <span>Adobe Photoshop</span>
+          <span>Illustrator</span>
+          <span>Canva</span>
+          <span>CapCut / VN</span>
+        </div>
+        <p class="closing">
+          "Паралельно працюю з UI/UX — тому композиція, типографіка та візуальна
+          система бренду для мене не інтуїція, а інструмент."
+        </p>
+        <div class="sign">
+          <a href="https://t.me/danasavchuk30" target="_blank" rel="noopener"
+            >Написати в Telegram</a
+          >
+          <a class="ghost" href="mailto:danasavchuk30@gmail.com"
+            >danasavchuk30@gmail.com</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
